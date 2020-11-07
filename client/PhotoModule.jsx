@@ -7,14 +7,14 @@ import Carousel from './components/Carousel.jsx';
 
 const placeholderData = [
   'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-001.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/98-002.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/31-001.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-002.jpg',
   'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-003.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/72-003.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/30-003.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/66-002.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/85-001.jpg',
-  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/57-002.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-004.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-005.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-006.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-007.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-008.jpg',
+  'https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/regular/1-009.jpg',
 ];
 
 class PhotoModule extends React.Component {

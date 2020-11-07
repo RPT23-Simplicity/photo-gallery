@@ -17,9 +17,9 @@ const items = [];
 // I don't think there's a sufficient picture selection, I'll refactor to get pics from Unsplash
 
 // get a random photo from Lorem Pixel (different each time)
-const getPhoto = async (width, height) => {
+const getPhoto = async (url) => {
   try {
-    const response = await fetch(`http://lorempixel.com/${width}/${height}`);
+    const response = await fetch(url);
     return response.body;
   } catch (err) {
     console.log(err);
@@ -116,10 +116,11 @@ const findAndUploadMainPhotos = async (number) => {
   }
 };
 
-const seedPhotos = async () => {
+const seedPhotos = async (url, style) => {
   try {
     // Upload "main" photos
-    await findAndUploadMainPhotos(100);
+    let fileStream = await findAndUploadMainPhotos(100);
+    const thumbnailUrl = await uploadPhoto(fileStream, `main/thumbnail/${1}-00${j}`);
 
     // Upload "other" photos
     // findAndUploadMultiplePhotos(5, 'other', 1024, 768);
@@ -133,3 +134,15 @@ const seedPhotos = async () => {
 // seedPhotos();
 
 // writeOtherUrlsToFile();
+
+
+const seedPhoto = async (url, productId, styleId) => {
+  try {
+    let fileStream = await getPhoto(url);;
+    const result = await uploadPhoto(fileStream, `main/regular/${productId}-00${styleId}`);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+seedPhoto("https://ultimate-nike.s3.us-west-1.amazonaws.com/photos/main/thumbnail/3-001.jpg", 3, 1);
