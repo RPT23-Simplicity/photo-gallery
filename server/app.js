@@ -13,7 +13,14 @@ app.use(cors({
 }));
 
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, '../public')));
+
+const options = {
+  setHeaders(res) {
+    res.set('Cache-control', 'public, max-age=300');
+  },
+};
+
+app.use(express.static(path.join(__dirname, '../public'), options));
 
 // get all main photos (regular and thumbnail) for all styles by product ID
 app.get('/photos/:productid', async (req, res) => {
